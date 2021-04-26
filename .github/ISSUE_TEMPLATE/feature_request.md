@@ -1,3 +1,9 @@
+---
+name: Feature request
+about: Suggest an idea for the nf-core/diaproteomics pipeline
+labels: enhancement
+---
+
 <!--
 # nf-core/diaproteomics feature request
 

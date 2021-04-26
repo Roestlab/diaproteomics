@@ -16,7 +16,7 @@ Sample <- args[6]
 df_list = list.files(path = "./", pattern = "*.mzML.tsv")
 df <- read.csv(paste0("./",df_list[1]), sep='\t')
 
-for (df_name in df_list[2:2])
+for (df_name in df_list[2:length(df_list)])
   print(df_name)
   df_add <- read.csv(paste0("./",df_name), sep='\t')
   df <- rbind(df, df_add)
@@ -54,7 +54,7 @@ dev.off()
 df_list = list.files(path = "./", pattern = "*quantities.csv")
 
 for (df_name in df_list)
-  df <- read.csv(paste0("./",df_name), sep=',')
+  df <- read.csv(paste0("./",df_name), sep='\t')
 
   df$intensity <- log10(df$intensity)
 
